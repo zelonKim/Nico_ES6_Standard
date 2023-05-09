@@ -1,128 +1,45 @@
 /*
-const settings = {
-    color: {
-        theme: "dark",
-        mix: "pink"
-    },
-    notifications: {
-        follow: true,
-        alerts: true,
-        unfollow: false
-    }
-};
+const days = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
 
-const {
-    color,
-    notifications
-} = settings;
+const mo = days[0];
+const tu = days[1];
+const we = days[2];
 
-console.log(color) // {theme: 'dark', mix: 'pink'}
-console.log(notifications) 
-// {   follow: true,
-//     alerts: true,
-//     unfollow: false  }
+console.log(mo, tu, we)  // Mon Tue Wed
 */
 
 /*
-const settings = {
-    color: {
-        theme: "dark",
-        mix: "pink"
-    },
-    notifications: {
-        follow: true,
-        alerts: true,
-        unfollow: false
-    }
-};
+const days = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
 
-const {
-    color: {theme},
-    notifications: {follow}
-} = settings;
+const [mo, tu, we] = days;
 
-console.log(theme) // dark
-console.log(follow) // true
+console.log(mo, tu, we)  // Mon Tue Wed
 */
 
-/*
-const settings = {
-    color: {
-        theme: "dark",
-        mix: "pink"
-    },
-    notifications: {
-        follow: true,
-        alerts: true,
-        unfollow: false
-    }
-};
+/* 
+const days = ['Mon','Tue','Wed']
 
-const {
-    notifications
-} = settings;
-console.log(notifications) // {follow: true, alerts: true, unfollow: false}
+const [mo, tu, we, th] = days;
+
+console.log(mo, tu, we, th) // Mon Tue Wed undefined
+ */
+
+/* 
+const days = ['Mon','Tue','Wed']
+
+const [mo, tu, we, th='Thu'] = days;
+
+console.log(mo, tu, we, th) // Mon Tue Wed Thu
+ */
+
+/* 
+const days = () => ['Mon','Tue','Wed']
+
+const [mo, tu, we] = days();
+
+console.log(mo, tu, we) // Mon Tue Wed
+ */
 
 
-const noti = settings.notifications;
-console.log(noti)  // {follow: true, alerts: true, unfollow: false}
-*/
 
-/*
-const settings = {
-    color: {
-        theme: "dark",
-        mix: "pink"
-    },
-    notifications: {
-        follow: true,
-        alerts: true,
-        unfollow: false
-    }
-};
 
-const {
-    notifications: {follow} // notifications 변수는 가져오지 않으며, 그 안의 follow 변수만 갖고 옴.
-} = settings;
-
-console.log(notifications) // 오류 발생
-console.log(follow) // true
-*/
-
-/*
-const settings = {
-    color: {
-        theme: "dark",
-        mix: "pink"
-    },
-    notifications: {
-        alerts: true,
-        unfollow: false
-    }
-};
-
-const {
-    notifications: {follow}
-} = settings;
-
-console.log(follow) // undefined
-*/
-
-/*
-const settings = {
-    color: {
-        theme: "dark",
-        mix: "pink"
-    },
-    notifications: {
-        alerts: true,
-        unfollow: false
-    }
-};
-
-const {
-    notifications: {follow = "do not have"}// 해당 프로퍼티가 없을 경우의 '디폴트값(=)' 설정 
-} = settings;
-
-console.log(follow) // do not have
-*/
