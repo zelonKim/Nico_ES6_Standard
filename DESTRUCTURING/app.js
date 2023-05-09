@@ -1,51 +1,29 @@
 /*
-function checkFollow() {return "is follow done?"};
-function checkAlert() {return "is Alert done?"};
+let mon = "Sat";
+let sat = "Mon";
 
-const follow = checkFollow();
-const alert = checkAlert();
+[sat, mon] = [mon, sat]  // 스와핑(Swapping)
 
-const settings = {
-    notifications: {
-        isFollow: follow,
-        isAlert: alert
-    }
-}
-const {notifications} = settings
-console.log(notifications) // {isFollow: 'is follow done?', isAlert: 'is Alert done?'}
-*/
-
-/* 
-function checkFollow() {return "is follow done?"};
-function checkAlert() {return "is Alert done?"};
-
-const follow = checkFollow();
-const alert = checkAlert();
-
-const settings = {
-    notifications: {
-        follow: follow,
-        alert: alert
-    }
-}
-const {notifications} = settings
-console.log(notifications) // {follow: 'is follow done?', alert: 'is Alert done?'}
+console.log(mon) // Mon
+console.log(sat) // Sat
 */
 
 
+
+
 /* 
-function checkFollow() {return "is follow done?"};
-function checkAlert() {return "is Alert done?"};
+const days = ['Mon','Tue','Wed','Thu','Fri'];
 
-const follow = checkFollow();
-const alert = checkAlert();
+const [th, fr] = days;
 
-const settings = {
-    notifications: {
-        follow, //프로퍼티의 키(key)와 값(value)의 이름이 같을때 하나로 축약해서 사용할 수도 있음.
-        alert 
-    }
-}
-const {notifications} = settings
-console.log(notifications)  // {follow: 'is follow done?', alert: 'is Alert done?'}
- */
+console.log(th, fr); // Mon Tue
+*/
+
+/* 
+const days = ['Mon','Tue','Wed','Thu','Fri'];
+
+const [ , , , th, fr] = days;  // 스키핑(skipping)
+
+console.log(th, fr); // Thu Fri
+*/
+
