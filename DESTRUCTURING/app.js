@@ -1,78 +1,101 @@
-/* const settings = {
-    color: {
-        chosen_color: "dark"
-    }
-};
-
-const {
-    color: {chosen_color}
-} = settings;
-
-console.log(chosenColor); // 오류 발생
+/* 
+function saveSettings(settings) {
+    console.log(settings);
+}
+saveSettings({
+    follow: true, 
+    alert: true, 
+    color: "green"
+});
+// {follow: true, alert: true, color: 'green'}
  */
 
 /* 
-const settings = {
+function saveSettings({follow, alert, color}) {
+    console.log(follow);
+}
+saveSettings({
+    follow: true, 
+    alert: true, 
+    color: "green", 
+});
+// true 
+*/
+
+/* 
+function saveSettings({follow, alert, color}) {
+    console.log(color);
+}
+
+saveSettings({
+    follow: true, 
+    alert: true, 
+    color: "green", 
+});
+// green 
+*/
+
+
+/*
+function saveSettings({follow, alert, color, mkt}) {
+    console.log(mkt);
+}
+
+saveSettings({
+    follow: true, 
+    alert: true, 
+    color: "green", 
+}); 
+// undefined 
+*/
+
+
+/* 
+function saveSettings({follow, alert, color, mkt="hello"}) {
+    console.log(mkt);
+}
+
+saveSettings({
+    follow: true, 
+    alert: true, 
+    color: "green", 
+}); 
+// hello 
+*/
+
+/* 
+function saveSettings({notifications, color: {theme}}) {
+    console.log(notifications);
+}
+
+saveSettings({
+    notifications: {
+        follow: true,
+        alert: true,
+        mkt: false
+    },
     color: {
-        chosen_color: "dark"
+        theme: "blue"
     }
-};
-
-const {
-    color: {chosen_color: chosenColor} // 리네이밍(Renaming)
-} = settings;
-
-console.log(chosenColor); // dark
+});
+// {follow: true, alert: true, mkt: false}
  */
 
 
 /*
-const settings = {
+function saveSettings({notifications, color: {theme}}) {
+    console.log(theme);
+}
+
+saveSettings({
+    notifications: {
+        follow: true,
+        alert: true,
+        mkt: false
+    },
     color: {
-        chosen_color: "dark"
+        theme: "dark"
     }
-};
-
-let chosenColor = 'green';
-
-const {
-    color: {chosen_color: chosenColor}
-} = settings;
-
-console.log(chosenColor); // 오류 발생 
-*/
-
-
-/* 
-const settings = {
-    color: {
-        chosen_color: "dark"
-    }
-};
-
-let chosenColor = 'green';
-
-({
-    color: {chosen_color: chosenColor}
-} = settings);
-
-console.log(chosenColor); // dark 
-*/
-
-/* 
-const settings = {
-    color: {
-        chosen_color: "dark"
-    }
-};
-
-let chosenColor = 'green';
-console.log(chosenColor); // green
-
-({
-    color: {chosen_color: chosenColor}
-} = settings);
-
-console.log(chosenColor); // dark  
-*/
-
+});
+// dark
+ */
