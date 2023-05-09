@@ -1,101 +1,51 @@
-/* 
-function saveSettings(settings) {
-    console.log(settings);
-}
-saveSettings({
-    follow: true, 
-    alert: true, 
-    color: "green"
-});
-// {follow: true, alert: true, color: 'green'}
- */
-
-/* 
-function saveSettings({follow, alert, color}) {
-    console.log(follow);
-}
-saveSettings({
-    follow: true, 
-    alert: true, 
-    color: "green", 
-});
-// true 
-*/
-
-/* 
-function saveSettings({follow, alert, color}) {
-    console.log(color);
-}
-
-saveSettings({
-    follow: true, 
-    alert: true, 
-    color: "green", 
-});
-// green 
-*/
-
-
 /*
-function saveSettings({follow, alert, color, mkt}) {
-    console.log(mkt);
-}
+function checkFollow() {return "is follow done?"};
+function checkAlert() {return "is Alert done?"};
 
-saveSettings({
-    follow: true, 
-    alert: true, 
-    color: "green", 
-}); 
-// undefined 
+const follow = checkFollow();
+const alert = checkAlert();
+
+const settings = {
+    notifications: {
+        isFollow: follow,
+        isAlert: alert
+    }
+}
+const {notifications} = settings
+console.log(notifications) // {isFollow: 'is follow done?', isAlert: 'is Alert done?'}
+*/
+
+/* 
+function checkFollow() {return "is follow done?"};
+function checkAlert() {return "is Alert done?"};
+
+const follow = checkFollow();
+const alert = checkAlert();
+
+const settings = {
+    notifications: {
+        follow: follow,
+        alert: alert
+    }
+}
+const {notifications} = settings
+console.log(notifications) // {follow: 'is follow done?', alert: 'is Alert done?'}
 */
 
 
 /* 
-function saveSettings({follow, alert, color, mkt="hello"}) {
-    console.log(mkt);
-}
+function checkFollow() {return "is follow done?"};
+function checkAlert() {return "is Alert done?"};
 
-saveSettings({
-    follow: true, 
-    alert: true, 
-    color: "green", 
-}); 
-// hello 
-*/
+const follow = checkFollow();
+const alert = checkAlert();
 
-/* 
-function saveSettings({notifications, color: {theme}}) {
-    console.log(notifications);
-}
-
-saveSettings({
+const settings = {
     notifications: {
-        follow: true,
-        alert: true,
-        mkt: false
-    },
-    color: {
-        theme: "blue"
+        follow, //프로퍼티의 키(key)와 값(value)의 이름이 같을때 하나로 축약해서 사용할 수도 있음.
+        alert 
     }
-});
-// {follow: true, alert: true, mkt: false}
- */
-
-
-/*
-function saveSettings({notifications, color: {theme}}) {
-    console.log(theme);
 }
-
-saveSettings({
-    notifications: {
-        follow: true,
-        alert: true,
-        mkt: false
-    },
-    color: {
-        theme: "dark"
-    }
-});
-// dark
+const {notifications} = settings
+console.log(notifications)  // {follow: 'is follow done?', alert: 'is Alert done?'}
  */
