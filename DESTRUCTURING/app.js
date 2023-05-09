@@ -1,45 +1,78 @@
+/* const settings = {
+    color: {
+        chosen_color: "dark"
+    }
+};
+
+const {
+    color: {chosen_color}
+} = settings;
+
+console.log(chosenColor); // 오류 발생
+ */
+
+/* 
+const settings = {
+    color: {
+        chosen_color: "dark"
+    }
+};
+
+const {
+    color: {chosen_color: chosenColor} // 리네이밍(Renaming)
+} = settings;
+
+console.log(chosenColor); // dark
+ */
+
+
 /*
-const days = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
+const settings = {
+    color: {
+        chosen_color: "dark"
+    }
+};
 
-const mo = days[0];
-const tu = days[1];
-const we = days[2];
+let chosenColor = 'green';
 
-console.log(mo, tu, we)  // Mon Tue Wed
+const {
+    color: {chosen_color: chosenColor}
+} = settings;
+
+console.log(chosenColor); // 오류 발생 
 */
 
-/*
-const days = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
 
-const [mo, tu, we] = days;
+/* 
+const settings = {
+    color: {
+        chosen_color: "dark"
+    }
+};
 
-console.log(mo, tu, we)  // Mon Tue Wed
+let chosenColor = 'green';
+
+({
+    color: {chosen_color: chosenColor}
+} = settings);
+
+console.log(chosenColor); // dark 
 */
 
 /* 
-const days = ['Mon','Tue','Wed']
+const settings = {
+    color: {
+        chosen_color: "dark"
+    }
+};
 
-const [mo, tu, we, th] = days;
+let chosenColor = 'green';
+console.log(chosenColor); // green
 
-console.log(mo, tu, we, th) // Mon Tue Wed undefined
- */
+({
+    color: {chosen_color: chosenColor}
+} = settings);
 
-/* 
-const days = ['Mon','Tue','Wed']
-
-const [mo, tu, we, th='Thu'] = days;
-
-console.log(mo, tu, we, th) // Mon Tue Wed Thu
- */
-
-/* 
-const days = () => ['Mon','Tue','Wed']
-
-const [mo, tu, we] = days();
-
-console.log(mo, tu, we) // Mon Tue Wed
- */
-
-
-
+console.log(chosenColor); // dark  
+*/
 
