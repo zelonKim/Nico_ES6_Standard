@@ -1,152 +1,81 @@
 /*
-const friends = [1, 2, 3, 4];
-
-console.log(friends) // [1, 2, 3, 4]
-*/
-
-/*
-const friends = [1, 2, 3, 4];
-
-console.log(...friends)  //  1 2 3 4
-*/
-
-/*
-const friends = [1, 2, 3, 4];
-const family = ["a", "b", "c"];
-
-console.log([friends, family]) // [Array(4), Array(3)]
-*/
-
-/*
-const friends = [1, 2, 3, 4];
-const family = ["a", "b", "c"];
-
-console.log([...friends, ...family]) // [1, 2, 3, 4, 'a', 'b', 'c']
-*/
-
-/*
-const person = {
-    name: "seongjin",
-    age: 28
-};
-
-const intro = {
-    hobby: "piano",
-    favorite: "coffe",
-    character: "nice"
+const bestFriends = (first, second, third, fourth) => {
+    console.log(`My best friend is ${first}`);
+    console.log(`The others friends are ${second}, ${third}, ${fourth}`)
 }
-
-console.log({person, intro}) // {person: {…}, intro: {…}}
+bestFriends("nico", "lynn", "dal", "seongjin")
+// My best friend is nico
+// The others friends are lynn, dal, seongjin
 */
 
-/*
-const person = {
-    name: "seongjin",
-    age: 28
-};
 
-const intro = {
-    hobby: "piano",
-    favorite: "coffee",
-    character: "nice"
+/* 
+const bestFriends = (first, ...rest) => {
+    console.log(`My best friend is ${first}`);
+    console.log(`The others friends are ${rest}`)
 }
-
-console.log({...person, ...intro}) // {name: 'seongjin', age: 28, hobby: 'piano', favorite: 'coffee', character: 'nice'} 
+bestFriends("nico", "lynn", "dal", "seongjin")
+// My best friend is nico
+// The others friends are lynn,dal,seongjin
 */
 
-/*
-const friends = ['nico', 'lynn']
 
-const newFriends = [...friends, 'dal'];
-
-console.log(newFriends); // ['nico', 'lynn', 'dal']
-*/
-
-/*
-const friends = ['nico', 'lynn']
-
-const newFriends = ['dal', ...friends];
-
-console.log(newFriends); // ['dal', 'nico', 'lynn']
-*/
-
-/*
-const weekDay = ['mon','tue','wed']
-const weekEnd = ['sat','sun']
-
-console.log([...weekDay,'thu','fri',...weekEnd]) // ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
-*/
-
-/*
-const auth = {
-    username: "seongjin",
-    email: "ksz@naver.com"
-};
-
-console.log({ ...auth, password: 1234 }); // {username: 'seongjin', email: 'ksz@naver.com', password: 1234}
-*/
-
-/*
-const auth = {
-    username: "seongjin",
-    email: "ksz@naver.com"
-};
-
-console.log({ password: 1234, ...auth, }); // {password: 1234, username: 'seongjin', email: 'ksz@naver.com'}
-*/
-
-/*
-const lastName = prompt("what is your Last name?") // 입력: (empty)
-
-const user = {
-    username: "nico",
-    age: 21
+/* 
+const bestFriends = (first, ...rest) => {
+    console.log(rest)
 }
+bestFriends("nico", "lynn", "dal", "seongjin")
+// ['lynn', 'dal', 'seongjin']
+ */
 
-console.log(typeof lastName) // 출력: string
+// -----------------------------
+
+
+/* 
+const user = {
+    name: "nico",
+    age: 22,
+    password: 1234
+};
+
+user.password = null
+
+console.log(user) // {name: 'nico', age: 22, password: null}
 */
+
+
+/* 
+const user = {
+    name: "nico",
+    age: 22,
+    password: 1234
+};
+
+const removePassword = ({password, ...rest}) => rest
+
+const safeUser = removePassword(user)
+console.log(safeUser)  // {name: 'nico', age: 22} 
+*/
+
 
 /*
-const lastName = prompt("what is your Last name?") // 입력: (empty)
-
 const user = {
-    username: "nico",
-    age: 21,
-    lastName: lastName
-}   
+    name: "nico",
+    age: 22,
+    password: 1234,
+};
 
-
-console.log(user) // 출력: {username: 'nico', age: 21, lastName: ''}
+const setCountry = ({ country = "KR" , ...rest}) => ({ country, ...rest})  // 비구조화 + 나머지 매개변수 + 전개 연산자
+console.log(setCountry(user)); // {country: 'KR', name: 'nico', age: 22, password: 1234}
 */
 
 
-/*
-const lastName = prompt("what is your Last name?") // 입력: (empty)
-
 const user = {
-    username: "nico",
-    age: 21,
-    lastName: lastName !== "" ? lastNmae : undefined
-}   
-console.log(user) // 출력: {username: 'nico', age: 21, lastName: undefined}
-*/
+    email: "nico",
+    age: 22,
+    password: 1234,
+};
 
-/*
-const lastName = prompt("what is your Last name?") // 입력: (empty)
+const rename = ({ email: name, ...rest }) => ({ name, ...rest})
 
-const user = {
-    username: "nico",
-    age: 21,
-    ...(lastName !== "" && {lastName})
-};   
-console.log(user) // 출력: {username: 'nico', age: 21}
-*/
-
-const lastName = prompt("what is your Last name?") // 입력: kim
-
-const user = {
-    username: "nico",
-    age: 21,
-    ...(lastName !== "" && {lastName})
-};   
-console.log(user) // 출력: {username: 'nico', age: 21, lastName: 'kim'}
+console.log(rename(user)); // {name: 'nico', age: 22, password: 1234}
