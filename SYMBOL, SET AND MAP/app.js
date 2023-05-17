@@ -72,13 +72,13 @@ weakset1.add(greeting3) // 정상 실행
 
 
 
- const map = new Map();
+/*  const map = new Map();
 
 console.log(map.set("age"))
 console.log(map.set("age",28)) // {'age' => 28}
 console.log(map.entries()) // {'age' => 28}
 console.log(map.has("age")) // true
-console.log(map.get("age")) // 28
+console.log(map.get("age")) // 28 */
 
 
 /* 

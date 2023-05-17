@@ -216,7 +216,7 @@ const admin1 = new Admin({
 }) */
 
 
-/* 
+
 class Counter {
     constructor({ initialNumber=0, counterId, plusId, minusId }) {
         this.count = initialNumber;
@@ -224,6 +224,7 @@ class Counter {
         this.plusBtn = document.getElementById(plusId);
         this.minusBtn = document.getElementById(minusId);
         this.addEventListeners();
+        
     }
     addEventListeners() {
         console.log(this); // Counter {count: 0, counter: span#count, plusBtn: button#add, minusBtn: button#minus}
@@ -241,16 +242,17 @@ class Counter {
         this.repaintCount();
     }
     repaintCount() {
+        console.log(this) // Counter {count: 0, counter: span#count, plusBtn: button#add, minusBtn: button#minus}
         this.counter.innerText = this.count;
     }
 }
 new Counter({counterId: "count", plusId: "add", minusId:"minus"}) 
- */
 
 
 
 
-class Counter {
+
+/* class Counter {
     constructor({ initialNumber=0, counterId, plusId, minusId }) {
         this.count = initialNumber;
         this.counter = document.getElementById(counterId);
@@ -259,7 +261,7 @@ class Counter {
         this.addEventListeners();
     }
     addEventListeners() {
-        console.log(this); // Counter {count: 0, counter: span#count, plusBtn: button#add, minusBtn: button#minus}
+        console.log(this); 
         this.plusBtn.addEventListener("click", this.increase);
         this.minusBtn.addEventListener("click", this.decrease);
     }
@@ -274,7 +276,8 @@ class Counter {
         this.repaintCount();
     }
     repaintCount = () => {
+        console.log(this)
         this.counter.innerText = this.count;
     };
 }
-new Counter({counterId: "count", plusId: "add", minusId:"minus"})
+new Counter({counterId: "count", plusId: "add", minusId:"minus"}) */
