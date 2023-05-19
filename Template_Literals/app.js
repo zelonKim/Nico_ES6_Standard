@@ -108,6 +108,7 @@ console.log(title);
 //     color:blue; 
 */
 
+/* 
 const styled = aElement => {
     const el = document.createElement(aElement);
     return args => {
@@ -125,6 +126,90 @@ console.log(title); // <h1 style="background-color: red; color: blue;">we are go
 
 document.body.append(title)
 title.innerText="we are good" // 화면에 스타일이 적용된 "we are good"을 출력함.
+*/
 
+////////////////////////////
+
+/* 
+const friends = ["nico", "lynn", "seongjin", "dal"]
+
+ for (let i=0; i<friends.length; i++) {
+    console.log(friends[i]);
+ }
+ // nico
+ // lynn
+ // seongjin
+ // dal 
+ */
 
  
+/*
+const friends = ["nico", "lynn", "seongjin", "dal"]
+
+ for (const friend of friends) { 
+    console.log(friend);
+ }
+ // nico
+ // lynn
+ // seongjin
+ // dal  
+ */
+
+ 
+/*  
+for (const greeting of "Hello") { 
+    console.log(greeting);
+ }
+// H
+// e
+// l
+// l
+// o 
+*/
+
+/* 
+const friends = ["nico", "lynn", "seongjin", "dal", "Mark", "Theo"]
+for (const friend of friends) { // 루프를 멈출 수도 있음.
+    if (friend === "dal") {
+        break; 
+    } else {
+        console.log(friend);
+    }
+}
+// nico
+// lynn
+// seongjin 
+*/
+
+//////////////////////////
+
+/* 
+const friends = ["nico", "lynn", "seongjin", "dal"]
+
+ friends.forEach(item => console.log(item));
+  // nico
+ // lynn
+ // seongjin
+ // dal  
+ */
+
+/* 
+const friends = ["nico", "lynn", "seongjin", "dal"]
+
+ friends.forEach((item, index)=> console.log(item, index));
+  // nico 0
+ // lynn 1
+ // seongjin 2
+ // dal 3 
+ */
+
+/* 
+const friends = ["nico", "lynn", "seongjin", "dal"]
+
+ friends.forEach((item, index, currentArray) => console.log(currentArray));
+ // ['nico', 'lynn', 'seongjin', 'dal']
+ // ['nico', 'lynn', 'seongjin', 'dal']
+ // ['nico', 'lynn', 'seongjin', 'dal']
+ // ['nico', 'lynn', 'seongjin', 'dal'] 
+ */
+

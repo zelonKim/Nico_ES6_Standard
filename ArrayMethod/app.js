@@ -1,4 +1,7 @@
 
+
+
+
 /* 
 const friends = Array.of("nico","seongjin","dal","mark");
 console.log(friends); // ['nico', 'seongjin', 'dal', 'mark']
