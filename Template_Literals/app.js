@@ -201,7 +201,7 @@ const friends = ["nico", "lynn", "seongjin", "dal"]
  // lynn 1
  // seongjin 2
  // dal 3 
- */
+ 
 
 /* 
 const friends = ["nico", "lynn", "seongjin", "dal"]
